@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [UsgbcTest]">
+  <parameter name="SignInSheet" value="SignIn"/>
+  <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
+  <parameter name="environment" value="staging"/>
+  <parameter name="PaymentSheet" value="Payment"/>
+  <parameter name="memberSheet" value="MembershipContact"/>
+  <parameter name="rowNum" value="2"/>
+  <parameter name="browserName" value="firefox"/>
+  <parameter name="SponsorshipSheet" value="Sponsorship"/>
+  <parameter name="DonationSheet" value="Donation"/>
+  <test name="USGBC(failed)">
+    <parameter name="SignInSheet" value="SignIn"/>
+    <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
+    <parameter name="environment" value="staging"/>
+    <parameter name="PaymentSheet" value="Payment"/>
+    <parameter name="memberSheet" value="MembershipContact"/>
+    <parameter name="rowNum" value="2"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="SponsorshipSheet" value="Sponsorship"/>
+    <parameter name="DonationSheet" value="Donation"/>
+    <classes>
+      <class name="com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest">
+        <methods>
+          <include name="MembershipRegistration" invocation-numbers="0"/>
+          <include name="end"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest -->
+    </classes>
+  </test> <!-- USGBC(failed) -->
+</suite> <!-- Failed suite [UsgbcTest] -->

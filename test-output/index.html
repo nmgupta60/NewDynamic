@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-UsgbcTest">
+              <span class="suite-name border-failed">UsgbcTest</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-UsgbcTest">
+                    <span>C:\Users\ARJUN\Desktop\NEW USGBC\DynamicUsgbc\DynamicUsgbc\src\main\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-UsgbcTest">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-UsgbcTest">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-UsgbcTest">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-UsgbcTest">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-UsgbcTest">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-UsgbcTest">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-UsgbcTest" class="hide-methods failed suite-UsgbcTest"> (hide)</a> <!-- hide-methods failed suite-UsgbcTest -->
+                      <a href="#" panel-name="suite-UsgbcTest" class="show-methods failed suite-UsgbcTest"> (show)</a> <!-- show-methods failed suite-UsgbcTest -->
+                    </span>
+                    <div class="method-list-content failed suite-UsgbcTest">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-UsgbcTest" title="com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest" hash-for-method="MembershipRegistration(2, MembershipContact, Payment, SignIn, ExamRegistration)">MembershipRegistration(2, MembershipContact, Payment, SignIn, ExamRegistration)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-UsgbcTest -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-UsgbcTest" class="panel UsgbcTest">
+          <div class="suite-UsgbcTest-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MembershipRegistration(2, MembershipContact, Payment, SignIn, ExamRegistration)">
+                  </a> <!-- MembershipRegistration(2, MembershipContact, Payment, SignIn, ExamRegistration) -->
+                  <span class="method-name">MembershipRegistration</span>
+                  <span class="parameters">(2, MembershipContact, Payment, SignIn, ExamRegistration)</span>
+                  <div class="stack-trace">java.lang.Error: Field is Empty expected [Test] but found []
+	at com.dynamicUsgbc.driver.CommonMethod.assertEqualsmessage(CommonMethod.java:265)
+	at com.dynamicUsgbc.ReusableMethods.ReusableMethodMembership.VerifyContactDetails(ReusableMethodMembership.java:284)
+	at com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest.MembershipRegistration(MembershipRegistrationFlowTest.java:46)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-UsgbcTest-class-failed -->
+        </div> <!-- panel UsgbcTest -->
+        <div panel-name="test-xml-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\ARJUN\Desktop\NEW USGBC\DynamicUsgbc\DynamicUsgbc\src\main\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;UsgbcTest&quot;&gt;
+  &lt;test name=&quot;USGBC&quot;&gt;
+    &lt;parameter name=&quot;SignInSheet&quot; value=&quot;SignIn&quot;/&gt;
+    &lt;parameter name=&quot;ExamRegistrationSheet&quot; value=&quot;ExamRegistration&quot;/&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;staging&quot;/&gt;
+    &lt;parameter name=&quot;PaymentSheet&quot; value=&quot;Payment&quot;/&gt;
+    &lt;parameter name=&quot;memberSheet&quot; value=&quot;MembershipContact&quot;/&gt;
+    &lt;parameter name=&quot;rowNum&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;SponsorshipSheet&quot; value=&quot;Sponsorship&quot;/&gt;
+    &lt;parameter name=&quot;DonationSheet&quot; value=&quot;Donation&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- USGBC --&gt;
+&lt;/suite&gt; &lt;!-- UsgbcTest --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for UsgbcTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">USGBC (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for UsgbcTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for UsgbcTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_UsgbcTest');
+function tableData_UsgbcTest() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'MembershipRegistration')
+data.setCell(0, 2, 'com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest')
+data.setCell(0, 3, 40006);
+window.suiteTableData['UsgbcTest']= { tableData: data, tableDiv: 'times-div-UsgbcTest'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <div id="times-div-UsgbcTest">
+              </div> <!-- times-div-UsgbcTest -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for UsgbcTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-UsgbcTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(firefox, staging)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">MembershipRegistration(2, MembershipContact, Payment, SignIn, ExamRegistration)</span>
+                <span class="method-start">12502 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=MembershipRegistration status=FAILURE method=MembershipRegistrationFlowTest.Members...)</span>
+                <span class="method-start">52512 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">end</span>
+                <span class="method-start">53373 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

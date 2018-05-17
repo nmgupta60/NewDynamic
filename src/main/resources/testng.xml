@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UsgbcTest">
+    
+  <test name="USGBC">
+    <parameter name="browserName"  value="firefox"/>
+    <parameter name="environment"  value="staging"/>
+    <parameter name="rowNum" value="2"/>
+ 
+    <parameter name="SignInSheet" value="SignIn"/>
+    <parameter name="PaymentSheet" value="Payment"/>
+    <parameter name="DonationSheet" value="Donation"/>
+    <parameter name="SponsorshipSheet" value="Sponsorship"></parameter>
+    <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
+    <parameter name="memberSheet" value="MembershipContact"></parameter>
+
+    
+
+    <classes>  
+     
+      <class name="com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest"/>
+
+    </classes>
+	</test> 
+  
+ 
+  
+</suite>
