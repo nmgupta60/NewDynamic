@@ -13,12 +13,18 @@
     <parameter name="SponsorshipSheet" value="Sponsorship"></parameter>
     <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
     <parameter name="memberSheet" value="MembershipContact"></parameter>
-
-    
+	<parameter name="Storesheet" value = "Store"/>
+    <parameter name="sponsorSheet" value="Sponsorship"></parameter>
+    <parameter name="communitySheet" value="CommunityRegistration"/>
 
     <classes>  
      
-      <class name="com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest"/>
+      <!-- <class name="com.dynamicUsgbc.testcases.MembershipRegistration"/> -->
+      <!-- <class name ="com.dynamicUsgbc.testcases.ExamRegistration"/> -->
+		<!-- <class name ="com.dynamicUsgbc.testcases.Store"/> -->
+		<!-- <class name ="com.dynamicUsgbc.testcases.ProductRegistration"/> -->
+		<!-- <class name ="com.dynamicUsgbc.testcases.Sponsorship"/> -->
+		<class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/>
 
     </classes>
 	</test> 

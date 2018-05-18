@@ -6,29 +6,35 @@
   <parameter name="environment" value="staging"/>
   <parameter name="PaymentSheet" value="Payment"/>
   <parameter name="memberSheet" value="MembershipContact"/>
+  <parameter name="sponsorSheet" value="Sponsor"/>
   <parameter name="rowNum" value="2"/>
+  <parameter name="Storesheet" value="Store"/>
   <parameter name="browserName" value="firefox"/>
   <parameter name="SponsorshipSheet" value="Sponsorship"/>
   <parameter name="DonationSheet" value="Donation"/>
+  <parameter name="communitySheet" value="CommunityRegistration"/>
   <test name="USGBC(failed)">
     <parameter name="SignInSheet" value="SignIn"/>
     <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
     <parameter name="environment" value="staging"/>
     <parameter name="PaymentSheet" value="Payment"/>
     <parameter name="memberSheet" value="MembershipContact"/>
+    <parameter name="sponsorSheet" value="Sponsor"/>
     <parameter name="rowNum" value="2"/>
+    <parameter name="Storesheet" value="Store"/>
     <parameter name="browserName" value="firefox"/>
     <parameter name="SponsorshipSheet" value="Sponsorship"/>
     <parameter name="DonationSheet" value="Donation"/>
+    <parameter name="communitySheet" value="CommunityRegistration"/>
     <classes>
-      <class name="com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest">
+      <class name="com.dynamicUsgbc.testcases.CommunityRegistration">
         <methods>
-          <include name="MembershipRegistration" invocation-numbers="0"/>
+          <include name="CommunityRegistrationFlow" invocation-numbers="0"/>
           <include name="end"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.dynamicUsgbc.testcases.MembershipRegistrationFlowTest -->
+      </class> <!-- com.dynamicUsgbc.testcases.CommunityRegistration -->
     </classes>
   </test> <!-- USGBC(failed) -->
 </suite> <!-- Failed suite [UsgbcTest] -->
