@@ -16,6 +16,7 @@
 	<parameter name="Storesheet" value = "Store"/>
     <parameter name="sponsorSheet" value="Sponsorship"></parameter>
     <parameter name="communitySheet" value="CommunityRegistration"/>
+    <parameter name="donationSheet" value="Donation"/>
 
     <classes>  
      
@@ -24,7 +25,11 @@
 		<!-- <class name ="com.dynamicUsgbc.testcases.Store"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.ProductRegistration"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.Sponsorship"/> -->
-		<class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/>
+	<!-- <class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/> -->
+		<!-- <class name ="com.dynamicUsgbc.testcases.DonationGreenApple"/> -->
+		<!-- <class name ="com.dynamicUsgbc.testcases.DonationHaiti"/> -->
+		<class name ="com.dynamicUsgbc.testcases.DonationGreenCouncil"/>
+		
 
     </classes>
 	</test> 
