@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="UsgbcTest" duration-ms="33457" started-at="2018-05-18T19:15:18Z" finished-at="2018-05-18T19:15:51Z">
+  <suite name="UsgbcTest" duration-ms="81479" started-at="2018-05-22T21:21:46Z" finished-at="2018-05-22T21:23:08Z">
     <groups>
     </groups>
-    <test name="USGBC" duration-ms="33457" started-at="2018-05-18T19:15:18Z" finished-at="2018-05-18T19:15:51Z">
-      <class name="com.dynamicUsgbc.testcases.DonationGreenCouncil">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.DonationGreenCouncil@42dafa95]" name="setup" is-config="true" duration-ms="12607" started-at="2018-05-18T15:15:18Z" finished-at="2018-05-18T15:15:30Z">
+    <test name="USGBC" duration-ms="81479" started-at="2018-05-22T21:21:46Z" finished-at="2018-05-22T21:23:08Z">
+      <class name="com.dynamicUsgbc.testcases.Store">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.Store@42dafa95]" name="setup" is-config="true" duration-ms="13155" started-at="2018-05-22T17:21:46Z" finished-at="2018-05-22T17:22:00Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="donationGreenCouncilFlow(int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.DonationGreenCouncil@42dafa95]" name="donationGreenCouncilFlow" duration-ms="20059" started-at="2018-05-18T15:15:30Z" finished-at="2018-05-18T15:15:50Z">
+        <test-method status="PASS" signature="StoreFlow(int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.Store@42dafa95]" name="StoreFlow" duration-ms="67488" started-at="2018-05-22T17:22:00Z" finished-at="2018-05-22T17:23:07Z">
           <params>
             <param index="0">
               <value>
@@ -42,18 +42,18 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Donation]]>
+                <![CDATA[Store]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- donationGreenCouncilFlow -->
-        <test-method status="FAIL" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.dynamicUsgbc.testcases.DonationGreenCouncil@42dafa95]" name="teardown" is-config="true" duration-ms="0" started-at="2018-05-18T15:15:50Z" finished-at="2018-05-18T15:15:50Z">
+        </test-method> <!-- StoreFlow -->
+        <test-method status="FAIL" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.dynamicUsgbc.testcases.Store@42dafa95]" name="teardown" is-config="true" duration-ms="0" started-at="2018-05-22T17:23:07Z" finished-at="2018-05-22T17:23:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=donationGreenCouncilFlow status=SUCCESS method=DonationGreenCouncil.donationGreenCouncilFlow(int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.DonationGreenCouncil@42dafa95] output={null}]]]>
+                <![CDATA[[TestResult name=StoreFlow status=SUCCESS method=Store.StoreFlow(int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dynamicUsgbc.testcases.Store@42dafa95] output={null}]]]>
               </value>
             </param>
           </params>
@@ -93,11 +93,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.dynamicUsgbc.testcases.DonationGreenCouncil@42dafa95]" name="end" is-config="true" duration-ms="759" started-at="2018-05-18T15:15:50Z" finished-at="2018-05-18T15:15:51Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:com.dynamicUsgbc.testcases.Store@42dafa95]" name="end" is-config="true" duration-ms="794" started-at="2018-05-22T17:23:07Z" finished-at="2018-05-22T17:23:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- com.dynamicUsgbc.testcases.DonationGreenCouncil -->
+      </class> <!-- com.dynamicUsgbc.testcases.Store -->
     </test> <!-- USGBC -->
   </suite> <!-- UsgbcTest -->
 </testng-results>

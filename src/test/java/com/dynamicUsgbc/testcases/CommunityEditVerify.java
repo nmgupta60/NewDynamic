@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 import com.dynamicUsgbc.driver.BaseClass;
 import com.dynamicUsgbc.driver.CommonMethod;
 
-public class CommunityRegistration extends BaseClass {
-
+public class CommunityEditVerify extends BaseClass{
+	
 	@Test
 	@Parameters({"rowNum" ,"PaymentSheet","SignInSheet","communitySheet"})
 	public void CommunityRegistrationFlow(int rowNum,String paymentSheet,String SignInSheet,String communitySheet) throws IOException {
@@ -28,6 +28,8 @@ public class CommunityRegistration extends BaseClass {
 		
 		String email = data.getCellData(SignInSheet, "Email",rowNum);
 		String password = data.getCellData(SignInSheet, "Password", rowNum);
+		
+		String newCommunityName = data.getCellData(communitySheet, "NewCommunityName", rowNum);
 		
 		String NameOnCard = data.getCellData(paymentSheet, "Name", rowNum);
 		String CardNumber = data.getCellData(paymentSheet, "CardNumber", rowNum);
@@ -53,12 +55,7 @@ public class CommunityRegistration extends BaseClass {
 		CommonMethod.selectdropdown("CommunityState", state);
 		CommonMethod.moveToElement("CommunityZip");
 		CommonMethod.sendKeys("CommunityZip", zip);
-		CommonMethod.click("IsStudent");
-		CommonMethod.sendKeys("SchoolName", schoolName);
-		CommonMethod.sendKeys("StudentId", studentId);
-		CommonMethod.moveToElement("GraduationDate");
-		CommonMethod.sleep(2000);
-		CommonMethod.sendKeys("GraduationDate", graduationDate);
+		CommonMethod.click("IsStudentN");
 		CommonMethod.click("IsEmergingProff");
 		CommonMethod.moveToElement("EmergingProffDOB");
 		CommonMethod.sendKeys("EmergingProffDOB", dob);
@@ -76,6 +73,22 @@ public class CommunityRegistration extends BaseClass {
 		CommonMethod.sendKeys("SignInpassword", password);
 		CommonMethod.click("CommunityContinue");
 		
+		CommonMethod.click("CommunityDetailsEdit");
+		CommonMethod.sleep(2000);
+		CommonMethod.selectdropdown("communityName", newCommunityName);
+		System.out.println("Community Name changed from USGBC Northern California to USGBC North Carolina");
+		CommonMethod.click("IsStudent");
+		CommonMethod.sendKeys("SchoolName", schoolName);
+		CommonMethod.sendKeys("StudentId", studentId);
+		CommonMethod.moveToElement("GraduationDate");
+		CommonMethod.sleep(2000);
+		CommonMethod.sendKeys("GraduationDate", graduationDate);
+		CommonMethod.click("tickAgree");
+		CommonMethod.sleep(2000);
+		CommonMethod.click("CommunityContinue");
+		CommonMethod.sleep(2000);
+		CommonMethod.assertEqualsmessage("VerifyCommunityName", newCommunityName, "Community Name didn't matched");
+		
 		CommonMethod.sendKeys("NameOnCard", NameOnCard);
 		CommonMethod.sendKeys("CardNumber", CardNumber);
 		CommonMethod.selectdropdown("ExpirationMonth", ExpirationMonth);
@@ -90,9 +103,10 @@ public class CommunityRegistration extends BaseClass {
 		CommonMethod.click("PaymentSubmitButton");
 		CommonMethod.sleep(3000);
 		
-		CommonMethod.takeScreenshot("communityregistration");
+		CommonMethod.takeScreenshot("communityEditVerify");
 		CommonMethod.assertEqualsmessage("ReceiptCommunityName", communityName, "Community Name is not correct");
 		
 		
 	}
+
 }

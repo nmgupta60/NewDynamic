@@ -180,9 +180,12 @@ public class CommonMethod extends BaseClass  {
 		findElement(objectLocater).click();
 		
 	}
-	//user defined sendkeys Method
+	//user defined sendkeys Method driver.findElement(By.id("edit-items-0-qty")).sendKeys(Keys.chord(Keys.CONTROL,"a"),value);
 	public static void sendKeys(String objectLocater,String value) throws IOException{
 		findElement(objectLocater).sendKeys(value);
+	}
+	public static void sendKeys1(String objectLocater,String value) throws IOException{
+		findElement(objectLocater).sendKeys(Keys.chord(Keys.CONTROL,"a"),value);
 	}
 	//user defined gettext Method
 	public static String getText( String objectLocater) throws IOException {
@@ -369,6 +372,7 @@ public class CommonMethod extends BaseClass  {
     	se.selectByVisibleText(value);
     	
     }
+
     
     public static String getFirstSelectedOptionDropdown (String objectLocator) throws IOException, InterruptedException {
     	

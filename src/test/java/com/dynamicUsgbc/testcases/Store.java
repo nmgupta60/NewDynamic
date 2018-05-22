@@ -40,57 +40,67 @@ public class Store extends BaseClass{
 		String BillState = data.getCellData(paymentSheet, "State", rowNum);
 		String BillZipCode = data.getCellData(paymentSheet, "Zip", rowNum);
 		
-		CommonMethod.ExtentReportConfig();
-		CommonMethod.setUrl(StoreUrl);
-		CommonMethod.sleep(1000);
-		CommonMethod.click("geenApplePins");
-		CommonMethod.sleep(1000);
-		CommonMethod.click("addToCart");
-		CommonMethod.click("clickCheckout");
-		
-		//CommonMethod.selectdropdown("shippingCountry", country);
-		//CommonMethod.moveToElement("shippingAdd1");
-		CommonMethod.sendKeys("CommunityAdd1", street1);
-		System.out.println("im here");
-		CommonMethod.sendKeys("CommunityAdd2", street2);
-		CommonMethod.sendKeys("CommunityCity", city);
-		CommonMethod.selectdropdown("CommunityState", state);
-		CommonMethod.moveToElement("CommunityZip");
-		CommonMethod.sendKeys("CommunityZip",zip );
-		System.out.println("im here");
-		CommonMethod.selectdropdown("selectServiceType", serviceType);
-		Thread.sleep(4000);
-		CommonMethod.click("IsStudent");
-		CommonMethod.sendKeys("SchoolName", school);
-		CommonMethod.sendKeys("StudentId", studentId);
-		CommonMethod.sendKeys("GraduationDate", graduation);
-		CommonMethod.click("HearEmail");
-		data.setCellData(Storesheet,"TotalAmount" , rowNum, CommonMethod.getText("finalShippingPrice"));
-		CommonMethod.click("CommunityContinue");
-		Thread.sleep(3000);
+		try {
+			//CommonMethod.ExtentReportConfig();
+			CommonMethod.setUrl(StoreUrl);
+			CommonMethod.sleep(1000);
+			CommonMethod.click("geenApplePins");
+			CommonMethod.sleep(1000);
+			CommonMethod.click("addToCart");
+			CommonMethod.click("clickCheckout");
+			
+			//CommonMethod.selectdropdown("shippingCountry", country);
+			//CommonMethod.moveToElement("shippingAdd1");
+			CommonMethod.sendKeys("CommunityAdd1", street1);
+			System.out.println("im here");
+			CommonMethod.sendKeys("CommunityAdd2", street2);
+			CommonMethod.sendKeys("CommunityCity", city);
+			CommonMethod.selectdropdown("CommunityState", state);
+			CommonMethod.moveToElement("CommunityZip");
+			CommonMethod.sendKeys("CommunityZip",zip );
+			
+			CommonMethod.moveToElement("selectServiceType");
+			System.out.println("im here....");
+			CommonMethod.selectdropdown("selectServiceType", serviceType);
+			System.out.println(CommonMethod.getattributeLabel("selectServiceType"));
+			Thread.sleep(4000);
+			CommonMethod.click("IsStudent");
+			CommonMethod.sendKeys("SchoolName", school);
+			CommonMethod.sendKeys("StudentId", studentId);
+			CommonMethod.sendKeys("GraduationDate", graduation);
+			CommonMethod.click("HearEmail");
+			data.setCellData(Storesheet,"TotalAmount" , rowNum, CommonMethod.getText("finalShippingPrice"));
+			CommonMethod.click("CommunityContinue");
+			Thread.sleep(3000);
 
-		CommonMethod.sendKeys("SignInEmailId", email);
-		CommonMethod.sendKeys("SignInpassword", password);
-		CommonMethod.click("CommunityContinue");
+			CommonMethod.sendKeys("SignInEmailId", email);
+			CommonMethod.sendKeys("SignInpassword", password);
+			CommonMethod.click("CommunityContinue");
+			
+			CommonMethod.sendKeys("NameOnCard", NameOnCard);
+			CommonMethod.sendKeys("CardNumber", CardNumber);
+			CommonMethod.selectdropdown("ExpirationMonth", ExpirationMonth);
+			CommonMethod.selectdropdown("ExpirationYear", ExpirationYear);
+			CommonMethod.sendKeys("SecurityCode", SecurityCode);
+			CommonMethod.selectdropdown("BillCountry", BillCountry);
+			CommonMethod.sendKeys("BillStreetAdd1", BillStreetAdd1);
+			CommonMethod.sendKeys("BillStreetAdd2", BillStreetAdd2);
+			CommonMethod.sendKeys("BillCity", BillCity);
+			CommonMethod.selectdropdown("BillState", BillState);
+			CommonMethod.sendKeys("BillZipCode", BillZipCode);
+			CommonMethod.click("PaymentSubmitButton");
+			CommonMethod.sleep(3000);
+			
+			CommonMethod.takeScreenshot("StoreFlow");
+			CommonMethod.assertEqualsmessage("VerifyStoreCity", city, "billing City is not correct");
+			CommonMethod.assertEqualsmessage("VerifyStoreState", state, "Billing State is not correct");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getLocalizedMessage());
 		
-		CommonMethod.sendKeys("NameOnCard", NameOnCard);
-		CommonMethod.sendKeys("CardNumber", CardNumber);
-		CommonMethod.selectdropdown("ExpirationMonth", ExpirationMonth);
-		CommonMethod.selectdropdown("ExpirationYear", ExpirationYear);
-		CommonMethod.sendKeys("SecurityCode", SecurityCode);
-		CommonMethod.selectdropdown("BillCountry", BillCountry);
-		CommonMethod.sendKeys("BillStreetAdd1", BillStreetAdd1);
-		CommonMethod.sendKeys("BillStreetAdd2", BillStreetAdd2);
-		CommonMethod.sendKeys("BillCity", BillCity);
-		CommonMethod.selectdropdown("BillState", BillState);
-		CommonMethod.sendKeys("BillZipCode", BillZipCode);
-		CommonMethod.click("PaymentSubmitButton");
-		CommonMethod.sleep(3000);
+		}
 		
-		CommonMethod.assertEqualsmessage("VerifyStoreCity", city, "billing City is not correct");
-		CommonMethod.assertEqualsmessage("VerifyStoreState", state, "Billing State is not correct");
 		
-		CommonMethod.takeScreenshot("StoreFlow");
 		
 	}
 }

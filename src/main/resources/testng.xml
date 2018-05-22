@@ -20,12 +20,14 @@
 
     <classes>  
      
-  	  <class name="com.dynamicUsgbc.testcases.MembershipRegistration"/>
-      <!-- <class name ="com.dynamicUsgbc.testcases.ExamRegistration"/> -->
-		<!-- <class name ="com.dynamicUsgbc.testcases.Store"/> -->
+  	<!--   <class name="com.dynamicUsgbc.testcases.MembershipRegistration"/> -->
+  	   <!-- <class name="com.dynamicUsgbc.testcases.MembershipEditVerify"/> -->
+      		<!-- <class name ="com.dynamicUsgbc.testcases.ExamRegistration"/> -->
+			 <class name ="com.dynamicUsgbc.testcases.Store"/> 
 		<!-- <class name ="com.dynamicUsgbc.testcases.ProductRegistration"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.Sponsorship"/> -->
-	<!-- <class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/> -->
+	 <!-- <class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/>  -->
+	 <!-- <class name ="com.dynamicUsgbc.testcases.CommunityEditVerify"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.DonationGreenApple"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.DonationHaiti"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.DonationGreenCouncil"/> -->

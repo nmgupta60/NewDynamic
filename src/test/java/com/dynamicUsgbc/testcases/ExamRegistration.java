@@ -97,7 +97,7 @@ public class ExamRegistration extends BaseClass{
 			
 			CommonMethod.assertEqualsmessage("ReceiptExamName", examType, "Exam Name is not correct");
 			CommonMethod.assertEqualsmessage("ReceiptExamLanguage", language, "Exam Language is not correct");
-			CommonMethod.assertEqualsmessage("ReceiptExamFee", Amount, "Exam Fee is not correct");
+			CommonMethod.assertEqualsmessage("ReceiptExamFee", membershipAmount, "Exam Fee is not correct");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

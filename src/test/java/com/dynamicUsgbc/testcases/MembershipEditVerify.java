@@ -32,6 +32,8 @@ public class MembershipEditVerify extends BaseClass{
 		String subCategory        = data.getCellData(memberSheet, "SubCategory", rowNum);
 		String revenue        = data.getCellData(memberSheet, "Revenue", rowNum);
 		
+		String editTerm = data.getCellData(memberSheet,  "EditTerm",rowNum);
+		
 		String NameOnCard = data.getCellData(paymentSheet, "Name", rowNum);
 		String CardNumber = data.getCellData(paymentSheet, "CardNumber", rowNum);
 		String ExpirationMonth = data.getCellData(paymentSheet, "ExpMonth", rowNum);
@@ -91,6 +93,15 @@ public class MembershipEditVerify extends BaseClass{
 		data.setCellData(memberSheet, "TotalAmount", rowNum, Amount);
 		CommonMethod.click("CommunityContinue");
 		CommonMethod.assertcontainsmessage("VerifyTextOnPayment", "Confirmation", "Didn't Redirected to paymnet page");
+		
+		CommonMethod.click("MembershipOrganizationDetailsEdit");
+		CommonMethod.sleep(1000);
+		CommonMethod.selectdropdown("MemberShipTerm",editTerm );
+		System.out.println("Term Changed from 2 years to 1 year");
+		CommonMethod.click("CommunityContinue");
+		CommonMethod.sleep(3000);
+		CommonMethod.takeScreenshot("MembershipTermNotUpdating");
+		CommonMethod.assertEqualsmessage("VerifyMembershipPaymentTerm",editTerm, "Does not matching the Term");
 	    
 		CommonMethod.sendKeys("NameOnCard", NameOnCard);
 		CommonMethod.sendKeys("CardNumber", CardNumber);
@@ -105,13 +116,13 @@ public class MembershipEditVerify extends BaseClass{
 		CommonMethod.sendKeys("BillZipCode", BillZipCode);
 		CommonMethod.click("PaymentSubmitButton");
 		CommonMethod.sleep(3000);
-		
+		CommonMethod.takeScreenshot("MembershipRegistrationFlow");
 		String membershipAmount = Amount + ".00";
 		String membershipLevel   = data.getCellData(memberSheet, "MembershipLevel", rowNum);
-		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptAmount", Amount, "Amount is not correct");
+		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptAmount", membershipAmount, "Amount is not correct");
 		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptLevel",membershipLevel.toLowerCase() , "Membership Level is not correct");
 		
-		CommonMethod.takeScreenshot("MembershipRegistrationFlow");
+		
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());
 			Error e1 = new Error(t.getMessage());

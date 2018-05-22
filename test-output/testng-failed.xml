@@ -29,14 +29,14 @@
     <parameter name="DonationSheet" value="Donation"/>
     <parameter name="donationSheet" value="Donation"/>
     <classes>
-      <class name="com.dynamicUsgbc.testcases.DonationGreenApple">
+      <class name="com.dynamicUsgbc.testcases.CommunityEditVerify">
         <methods>
+          <include name="CommunityRegistrationFlow" invocation-numbers="0"/>
           <include name="end"/>
           <include name="teardown"/>
-          <include name="greenAppleDonationFlow" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.dynamicUsgbc.testcases.DonationGreenApple -->
+      </class> <!-- com.dynamicUsgbc.testcases.CommunityEditVerify -->
     </classes>
   </test> <!-- USGBC(failed) -->
 </suite> <!-- Failed suite [UsgbcTest] -->

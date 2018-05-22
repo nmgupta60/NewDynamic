@@ -106,13 +106,13 @@ public class MembershipRegistration extends BaseClass {
 		CommonMethod.sendKeys("BillZipCode", BillZipCode);
 		CommonMethod.click("PaymentSubmitButton");
 		CommonMethod.sleep(3000);
-		
+		CommonMethod.takeScreenshot("MembershipRegistrationFlow");
 		String membershipAmount = Amount + ".00";
 		String membershipLevel   = data.getCellData(memberSheet, "MembershipLevel", rowNum);
 		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptAmount", Amount, "Amount is not correct");
 		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptLevel",membershipLevel.toLowerCase() , "Membership Level is not correct");
 		
-		CommonMethod.takeScreenshot("MembershipRegistrationFlow");
+		
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());
 			Error e1 = new Error(t.getMessage());
