@@ -10,7 +10,7 @@
     <parameter name="SignInSheet" value="SignIn"/>
     <parameter name="PaymentSheet" value="Payment"/>
     <parameter name="DonationSheet" value="Donation"/>
-    <parameter name="SponsorshipSheet" value="Sponsorship"></parameter>
+   <!--  <parameter name="SponsorshipSheet" value="Sponsorship"></parameter> -->
     <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
     <parameter name="memberSheet" value="MembershipContact"></parameter>
 	<parameter name="Storesheet" value = "Store"/>
@@ -21,21 +21,28 @@
     <classes>  
      
   	<!--   <class name="com.dynamicUsgbc.testcases.MembershipRegistration"/> -->
-  	   <!-- <class name="com.dynamicUsgbc.testcases.MembershipEditVerify"/> -->
+  	  <!--  <class name="com.dynamicUsgbc.testcases.MembershipEditVerify"/>  -->
+  	   
       		<!-- <class name ="com.dynamicUsgbc.testcases.ExamRegistration"/> -->
-			 <class name ="com.dynamicUsgbc.testcases.Store"/> 
-		<!-- <class name ="com.dynamicUsgbc.testcases.ProductRegistration"/> -->
-		<!-- <class name ="com.dynamicUsgbc.testcases.Sponsorship"/> -->
+      <!-- 	 <class name ="com.dynamicUsgbc.testcases.ExamEditVerify"/> -->  
+      		
+		<!-- 	 <class name ="com.dynamicUsgbc.testcases.Store"/>  -->
+		
+		<!-- <class name ="com.dynamicUsgbc.testcases.ProductRegistration"/>  -->
+		
+		<!--  <class name ="com.dynamicUsgbc.testcases.Sponsorship"/> -->
+		<!--  <class name ="com.dynamicUsgbc.testcases.SponsorEditVerify"/> -->
+		
 	 <!-- <class name ="com.dynamicUsgbc.testcases.CommunityRegistration"/>  -->
 	 <!-- <class name ="com.dynamicUsgbc.testcases.CommunityEditVerify"/> -->
-		<!-- <class name ="com.dynamicUsgbc.testcases.DonationGreenApple"/> -->
+	 
+		 <class name ="com.dynamicUsgbc.testcases.DonationGreenApple"/>
 		<!-- <class name ="com.dynamicUsgbc.testcases.DonationHaiti"/> -->
 		<!-- <class name ="com.dynamicUsgbc.testcases.DonationGreenCouncil"/> -->
 		
 
     </classes>
 	</test> 
-  
- 
+
   
 </suite>

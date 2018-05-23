@@ -11,7 +11,7 @@ import com.dynamicUsgbc.driver.CommonMethod;
 public class Sponsorship extends BaseClass{
 	
 	@Test
-	@Parameters({"rowNum" ,"PaymentSheet","SignInSheet","SponsorSheet"})
+	@Parameters({"rowNum" ,"PaymentSheet","SignInSheet","sponsorSheet"})
 	public void SponsorshipFlow(int rowNum, String paymentSheet, String signInSheet, String sponsorSheet) throws Exception {
 		
 		String communityName  = data.getCellData(sponsorSheet, "CommunityName", rowNum);

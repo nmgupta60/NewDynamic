@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [UsgbcTest]">
-  <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
-  <parameter name="PaymentSheet" value="Payment"/>
-  <parameter name="sponsorSheet" value="Sponsorship"/>
-  <parameter name="Storesheet" value="Store"/>
-  <parameter name="communitySheet" value="CommunityRegistration"/>
   <parameter name="SignInSheet" value="SignIn"/>
+  <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
   <parameter name="environment" value="staging"/>
+  <parameter name="PaymentSheet" value="Payment"/>
   <parameter name="memberSheet" value="MembershipContact"/>
+  <parameter name="sponsorSheet" value="Sponsorship"/>
   <parameter name="rowNum" value="2"/>
+  <parameter name="Storesheet" value="Store"/>
   <parameter name="browserName" value="firefox"/>
-  <parameter name="SponsorshipSheet" value="Sponsorship"/>
   <parameter name="DonationSheet" value="Donation"/>
   <parameter name="donationSheet" value="Donation"/>
+  <parameter name="communitySheet" value="CommunityRegistration"/>
   <test name="USGBC(failed)">
-    <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
-    <parameter name="PaymentSheet" value="Payment"/>
-    <parameter name="sponsorSheet" value="Sponsorship"/>
-    <parameter name="Storesheet" value="Store"/>
-    <parameter name="communitySheet" value="CommunityRegistration"/>
     <parameter name="SignInSheet" value="SignIn"/>
+    <parameter name="ExamRegistrationSheet" value="ExamRegistration"/>
     <parameter name="environment" value="staging"/>
+    <parameter name="PaymentSheet" value="Payment"/>
     <parameter name="memberSheet" value="MembershipContact"/>
+    <parameter name="sponsorSheet" value="Sponsorship"/>
     <parameter name="rowNum" value="2"/>
+    <parameter name="Storesheet" value="Store"/>
     <parameter name="browserName" value="firefox"/>
-    <parameter name="SponsorshipSheet" value="Sponsorship"/>
     <parameter name="DonationSheet" value="Donation"/>
     <parameter name="donationSheet" value="Donation"/>
+    <parameter name="communitySheet" value="CommunityRegistration"/>
     <classes>
-      <class name="com.dynamicUsgbc.testcases.CommunityEditVerify">
+      <class name="com.dynamicUsgbc.testcases.SponsorEditVerify">
         <methods>
-          <include name="CommunityRegistrationFlow" invocation-numbers="0"/>
+          <include name="SponsorshipFlow" invocation-numbers="0"/>
           <include name="end"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.dynamicUsgbc.testcases.CommunityEditVerify -->
+      </class> <!-- com.dynamicUsgbc.testcases.SponsorEditVerify -->
     </classes>
   </test> <!-- USGBC(failed) -->
 </suite> <!-- Failed suite [UsgbcTest] -->

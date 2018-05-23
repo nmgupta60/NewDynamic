@@ -116,7 +116,7 @@ public class MembershipEditVerify extends BaseClass{
 		CommonMethod.sendKeys("BillZipCode", BillZipCode);
 		CommonMethod.click("PaymentSubmitButton");
 		CommonMethod.sleep(3000);
-		CommonMethod.takeScreenshot("MembershipRegistrationFlow");
+		CommonMethod.takeScreenshot("MembershipEditVerifyFlow");
 		String membershipAmount = Amount + ".00";
 		String membershipLevel   = data.getCellData(memberSheet, "MembershipLevel", rowNum);
 		CommonMethod.assertEqualsmessage("VerifyMembershipReceiptAmount", membershipAmount, "Amount is not correct");
@@ -124,10 +124,11 @@ public class MembershipEditVerify extends BaseClass{
 		
 		
 		} catch (Throwable t) {
+			CommonMethod.takeScreenshot("MembershipEditVerifyError");
 			System.out.println(t.getLocalizedMessage());
 			Error e1 = new Error(t.getMessage());
 			e1.setStackTrace(t.getStackTrace());
-			CommonMethod.testlogError( "<pre>" + e1.toString() + "</pre>");
+//			CommonMethod.testlogError( "<pre>" + e1.toString() + "</pre>");
 		}
 	}
 

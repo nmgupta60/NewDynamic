@@ -7,13 +7,13 @@
   <parameter name="rowNum" value="2"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.dynamicUsgbc.testcases.ExamRegistration">
+      <class name="com.dynamicUsgbc.testcases.ExamEditVerify">
         <methods>
           <include name="ExamRegistrationFlow"/>
           <include name="end"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.dynamicUsgbc.testcases.ExamRegistration -->
+      </class> <!-- com.dynamicUsgbc.testcases.ExamEditVerify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
