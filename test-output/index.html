@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-UsgbcTest">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-UsgbcTest" title="com.dynamicUsgbc.testcases.SponsorEditVerify" hash-for-method="SponsorshipFlow(2, Sponsorship, Payment, SignIn)">SponsorshipFlow(2, Sponsorship, Payment, SignIn)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-UsgbcTest" title="com.dynamicUsgbc.testcases.GreenAppleEditVerify" hash-for-method="greenAppleDonationFlow(2, Payment, SignIn, Donation)">greenAppleDonationFlow(2, Payment, SignIn, Donation)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-UsgbcTest -->
@@ -119,18 +119,56 @@
           <div class="suite-UsgbcTest-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.dynamicUsgbc.testcases.SponsorEditVerify</span>
+              <span class="class-name">com.dynamicUsgbc.testcases.GreenAppleEditVerify</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SponsorshipFlow(2, Sponsorship, Payment, SignIn)">
-                  </a> <!-- SponsorshipFlow(2, Sponsorship, Payment, SignIn) -->
-                  <span class="method-name">SponsorshipFlow</span>
-                  <span class="parameters">(2, Sponsorship, Payment, SignIn)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Amount didn&apos;t matched expected [300.0] but found [VerifySponserAmount]
-	at com.dynamicUsgbc.driver.CommonMethod.assertEqualsMessage(CommonMethod.java:273)
-	at com.dynamicUsgbc.testcases.SponsorEditVerify.SponsorshipFlow(SponsorEditVerify.java:78)
+                  <a name="greenAppleDonationFlow(2, Payment, SignIn, Donation)">
+                  </a> <!-- greenAppleDonationFlow(2, Payment, SignIn, Donation) -->
+                  <span class="method-name">greenAppleDonationFlow</span>
+                  <span class="parameters">(2, Payment, SignIn, Donation)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for visibility of element located by By.id: edit-choose-amount
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;ARJUNS&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d272bd3a-4f60-4421-8285-26b20a81dc95
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.dynamicUsgbc.driver.CommonMethod.WaitUntilVisibility(CommonMethod.java:789)
+	at com.dynamicUsgbc.driver.CommonMethod.findElement(CommonMethod.java:78)
+	at com.dynamicUsgbc.driver.CommonMethod.selectdropdown(CommonMethod.java:371)
+	at com.dynamicUsgbc.testcases.GreenAppleEditVerify.greenAppleDonationFlow(GreenAppleEditVerify.java:37)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;edit-choose-amount&quot;}
+Command duration or timeout: 60.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;ARJUNS&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d272bd3a-4f60-4421-8285-26b20a81dc95
+*** Element info: {Using=id, value=edit-choose-amount}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;edit-choose-amount&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;ARJUNS&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ARJUN/AppData/Local/Temp/anonymous30988169265398130webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ARJUN/AppData/Local/Temp/anonymous30988169265398130webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -161,7 +199,7 @@
     &lt;parameter name=&quot;donationSheet&quot; value=&quot;Donation&quot;/&gt;
     &lt;parameter name=&quot;communitySheet&quot; value=&quot;CommunityRegistration&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.dynamicUsgbc.testcases.SponsorEditVerify&quot;/&gt;
+      &lt;class name=&quot;com.dynamicUsgbc.testcases.GreenAppleEditVerify&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- USGBC --&gt;
 &lt;/suite&gt; &lt;!-- UsgbcTest --&gt;
@@ -203,14 +241,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SponsorshipFlow')
-data.setCell(0, 2, 'com.dynamicUsgbc.testcases.SponsorEditVerify')
-data.setCell(0, 3, 23789);
+data.setCell(0, 1, 'greenAppleDonationFlow')
+data.setCell(0, 2, 'com.dynamicUsgbc.testcases.GreenAppleEditVerify')
+data.setCell(0, 3, 60307);
 window.suiteTableData['UsgbcTest']= { tableData: data, tableDiv: 'times-div-UsgbcTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-UsgbcTest">
               </div> <!-- times-div-UsgbcTest -->
             </div> <!-- times-div -->
@@ -236,7 +274,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.dynamicUsgbc.testcases.SponsorEditVerify</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.dynamicUsgbc.testcases.GreenAppleEditVerify</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(firefox, staging)</span>
                 <span class="method-start">0 ms</span>
@@ -244,18 +282,18 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">SponsorshipFlow(2, Sponsorship, Payment, SignIn)</span>
-                <span class="method-start">11835 ms</span>
+                <span class="method-name">greenAppleDonationFlow(2, Payment, SignIn, Donation)</span>
+                <span class="method-start">12097 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">teardown([TestResult name=SponsorshipFlow status=FAILURE method=SponsorEditVerify.SponsorshipFlow(int, java.l...)</span>
-                <span class="method-start">35645 ms</span>
+                <span class="method-name">teardown([TestResult name=greenAppleDonationFlow status=FAILURE method=GreenAppleEditVerify.greenAppleDonatio...)</span>
+                <span class="method-start">72420 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">end</span>
-                <span class="method-start">35660 ms</span>
+                <span class="method-start">72427 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
